@@ -1,11 +1,12 @@
-import {PagesWrapperIndex, SellingItemDoor} from "../shared";
+import {PagesWrapperIndex, SellingItem} from "../shared";
 import {useEffect, useState} from "react";
 import door_fetcher from "./doors-fetcher.ts";
 import {FaSpinner} from "react-icons/fa";
 
 type Data = {
-  isbn: string,
   name: string,
+  description: string,
+  key?: number
 }
 
 export default function Door() {
@@ -13,7 +14,7 @@ export default function Door() {
 
   useEffect(() => {
     door_fetcher().then(data => {
-      setData(data)
+      data.length === 0 ? setData([]) : setData(data);
     })
   }, []);
 
@@ -24,11 +25,10 @@ export default function Door() {
           <FaSpinner className={`animate-spin text-5xl text-[var(--dark-brown)]`} />
         </div> : null}
         {data.map((el, i) => (
-          <SellingItemDoor
+          <SellingItem
             key={i}
-            isbn={el.isbn}
             name={el.name}
-          />
+            description={el.description}/>
         ))}
       </div>
     </PagesWrapperIndex>
