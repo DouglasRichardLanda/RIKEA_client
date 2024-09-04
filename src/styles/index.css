@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --vanilla-color: rgba(243, 229, 171, 1); /* Slight vanilla color */
+    --dark-green: #013220; /* Rich dark green */
+    --dark-brown: #4b2e00; /* Rich dark brown */
+}
+
+body {
+    background-color: var(--vanilla-color);
+}
