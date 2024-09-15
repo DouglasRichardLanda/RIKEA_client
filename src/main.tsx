@@ -1,13 +1,14 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import Routing from './routing.tsx'
-import './styles/index.css'
+import MainRouting from './routing/main-routing.tsx'
 import {BrowserRouter} from "react-router-dom";
+
+import './styles/index.css'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>
-      <Routing />
+      <MainRouting />
     </BrowserRouter>
   </StrictMode>,
 )
