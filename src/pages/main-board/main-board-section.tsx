@@ -1,10 +1,12 @@
 import {merge, useAvailableRandomItems} from "../../_lib";
 import {motion} from "framer-motion";
 import {useInView} from "react-intersection-observer";
+import {Link} from "react-router-dom";
 
 type SubElement = {
   name: string,
-  link: string
+  link: string,
+  availableNumbers: number
 }
 
 type MainBoardSectionType = {
@@ -52,41 +54,25 @@ export default function MainBoardSection(props: MainBoardSectionType) {
           </div>
         </div>
       </motion.div>
-
       <div
         className={`mb-40 flex w-full justify-between gap-1`}>
-        <motion.div
-          initial={{opacity: 0, y: "-20px"}}
-          animate={inView ? {opacity: 1, y: 0} : {opacity: 0}}
-          transition={props.swap ? {duration: 0.7} : {duration: 1}}
-          ref={ref}
-          className={`h-20 bg-custom-dark text-custom-bright w-full flex justify-center items-center`}>
-          element 1
-        </motion.div>
-        <motion.div
-          initial={{opacity: 0, y: "-20px"}}
-          animate={inView ? {opacity: 1, y: 0} : {opacity: 0}}
-          transition={props.swap ? {duration: 0.8} : {duration: 0.9}}
-          ref={ref}
-          className={`h-20 bg-custom-dark text-custom-bright w-full flex justify-center items-center`}>
-          element 1
-        </motion.div>
-        <motion.div
-          initial={{opacity: 0, y: "-20px"}}
-          animate={inView ? {opacity: 1, y: 0} : {opacity: 0}}
-          transition={props.swap ? {duration: 0.9} : {duration: 0.8}}
-          ref={ref}
-          className={`h-20 bg-custom-dark text-custom-bright w-full flex justify-center items-center`}>
-          element 1
-        </motion.div>
-        <motion.div
-          initial={{opacity: 0, y: "-20px"}}
-          animate={inView ? {opacity: 1, y: 0} : {opacity: 0}}
-          transition={props.swap ? {duration: 1} : {duration: 0.7}}
-          ref={ref}
-          className={`h-20 bg-custom-dark text-custom-bright w-full flex justify-center items-center`}>
-          element 1
-        </motion.div>
+        {props.subElements4.map((el, i) => {
+          let duration = props.swap ? 0.7 : 1;
+          const local_number = useAvailableRandomItems(el.availableNumbers)
+          return (
+            <motion.div
+              initial={{opacity: 0, y: "-20px"}}
+              animate={inView ? {opacity: 1, y: 0} : {opacity: 0}}
+              transition={props.swap ? {duration: duration + i/10} : {duration: duration + i/10}}
+              ref={ref}
+              className={`h-20 bg-custom-dark text-custom-bright w-full flex justify-center flex-col gap-5`}>
+              <Link to={el.link} className={`self-center justify-self-center text-xl tracking-widest`}>{el.name}</Link>
+              <div className={`self-end flex w-full justify-center`}>
+                <p className={`font-bold`}>Over: {local_number === 0 ? 0 : local_number}+ Offers</p>
+              </div>
+            </motion.div>
+          )
+        })}
       </div>
     </>
   )

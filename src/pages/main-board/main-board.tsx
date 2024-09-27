@@ -28,21 +28,30 @@ export default function MainBoard() {
           image={"./furniture.jpg"}
           availableItems={100_000}
           text={`lorem text for development purposes but you an write whatever you want. lorem text for development purposes but you an write whatever you want. lorem text for development purposes but you an write whatever you want.lorem text for development purposes but you an write whatever you want.lorem text for development purposes but you an write whatever you want.lorem text for development purposes but you an write whatever you want.`}
-          subElements4={[{name: "Igor", link: "#"}]}
+          subElements4={[{name: "Bed", link: "#", availableNumbers: 1500},
+            {name: "Paintings", link: "#", availableNumbers: 2000},
+            {name: "Shelves", link: "#", availableNumbers: 5000},
+            {name: "Windows", link: "#", availableNumbers: 4400}]}
           swap={false}/>
         <MainBoardSection
           h3={"Kitchen"}
           image={"./kitchen.jpg"}
           text={`lorem text for development purposes but you an write whatever you want. lorem text for development purposes but you an write whatever you want. lorem text for development purposes but you an write whatever you want.lorem text for development purposes but you an write whatever you want.`}
           availableItems={10_000}
-          subElements4={[{name: "Igor", link: "#"}]}
+          subElements4={[{name: "Tables", link: "#", availableNumbers: 3500},
+            {name: "Chairs", link: "#", availableNumbers: 3000},
+            {name: "Glasses", link: "#", availableNumbers: 300},
+            {name: "Plates", link: "#", availableNumbers: 500}]}
           swap={true}/>
         <MainBoardSection
           h3={"Indoor specialists"}
           image={"./indoorworker.jpg"}
           availableItems={5_000}
           text={`lorem text for development purposes but you an write whatever you want. lorem text for development purposes but you an write whatever you want. lorem text for development purposes but you an write whatever you want.lorem text for development purposes but you an write whatever you want.lorem text for development purposes but you an write whatever you want.lorem text for development purposes but you an write whatever you want.`}
-          subElements4={[{name: "Igor", link: "#"}]}
+          subElements4={[{name: "Kitchener", link: "#", availableNumbers: 230},
+            {name: "Plumber", link: "#", availableNumbers: 550},
+            {name: "Electrician", link: "#", availableNumbers: 400},
+            {name: "Cleaner", link: "#", availableNumbers: 1200}]}
           swap={false}/>
       </SectionLayout>
 
