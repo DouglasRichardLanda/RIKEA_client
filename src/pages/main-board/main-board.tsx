@@ -1,20 +1,51 @@
+import MainBoardFace from "./main-board-face.tsx";
+import ElementH2Section from "../../global-elements/shared/element-h2-section.tsx";
+import {SectionLayout} from "../../global-elements/layouts";
+import MainBoardSection from "./main-board-section.tsx";
 
+type SubElementType = {
+  name: string,
+  link: string
+}
 
-
-
-
+const subElements: SubElementType[] = [
+  {
+    name: "Igor",
+    link: "#"
+  }
+]
 
 export default function MainBoard() {
 
   return (
-    <section className={`h-[90vh]`}>
-      <div className={`w-full h-full bg-[url("/mainbg1.jpg")] bg-cover bg-top`}>
-        <div className={`flex flex-col h-full w-full bg-black/50 justify-center items-center text-custom-bright gap-5 tracking-wider`}>
-          <h1 className={`text-7xl`}>We will help you</h1>
-          <p className={`text-2xl tracking-widest`}>to build your dream</p>
-          <button className={`px-10 py-3 bg-red duration-200 hover:bg-red/80 tracking-widest`}>Contact</button>
-        </div>
-      </div>
+    <section>
+      <MainBoardFace imagesUrl={['./mainbg2.jpg', './mainbg1.jpg', './mainbg3.jpg', './mainbg4.jpg']}  />
+
+      <SectionLayout>
+        <ElementH2Section>indoor section</ElementH2Section>
+        <MainBoardSection
+          h3={"Bedroom Furniture"}
+          image={"./furniture.jpg"}
+          availableItems={100_000}
+          text={`lorem text for development purposes but you an write whatever you want. lorem text for development purposes but you an write whatever you want. lorem text for development purposes but you an write whatever you want.lorem text for development purposes but you an write whatever you want.lorem text for development purposes but you an write whatever you want.lorem text for development purposes but you an write whatever you want.`}
+          subElements4={[{name: "Igor", link: "#"}]}
+          swap={false}/>
+        <MainBoardSection
+          h3={"Kitchen"}
+          image={"./kitchen.jpg"}
+          text={`lorem text for development purposes but you an write whatever you want. lorem text for development purposes but you an write whatever you want. lorem text for development purposes but you an write whatever you want.lorem text for development purposes but you an write whatever you want.`}
+          availableItems={10_000}
+          subElements4={[{name: "Igor", link: "#"}]}
+          swap={true}/>
+        <MainBoardSection
+          h3={"Indoor specialists"}
+          image={"./indoorworker.jpg"}
+          availableItems={5_000}
+          text={`lorem text for development purposes but you an write whatever you want. lorem text for development purposes but you an write whatever you want. lorem text for development purposes but you an write whatever you want.lorem text for development purposes but you an write whatever you want.lorem text for development purposes but you an write whatever you want.lorem text for development purposes but you an write whatever you want.`}
+          subElements4={[{name: "Igor", link: "#"}]}
+          swap={false}/>
+      </SectionLayout>
+
     </section>
   )
 }
