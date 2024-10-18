@@ -65,6 +65,7 @@ export default function MainBoardSection(props: MainBoardSectionType) {
               animate={inView ? {opacity: 1, y: 0} : {opacity: 0}}
               transition={props.swap ? {duration: duration + i/10} : {duration: duration + i/10}}
               ref={ref}
+              key={i}
               className={`h-20 bg-custom-dark text-custom-bright w-full flex justify-center flex-col gap-5`}>
               <Link to={el.link} className={`self-center justify-self-center text-xl tracking-widest`}>{el.name}</Link>
               <div className={`self-end flex w-full justify-center`}>
