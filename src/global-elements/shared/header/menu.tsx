@@ -1,4 +1,4 @@
-import {merge} from "../../_lib";
+import {merge} from "../../../_lib";
 import MenuContentElement from "./menu-content.tsx";
 
 type MenuElementType = {

@@ -4,5 +4,5 @@
 
 
 body {
-    @apply bg-custom-bright;
+    @apply bg-custom-bright overflow-x-hidden;
 }
