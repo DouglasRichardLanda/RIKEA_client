@@ -1,5 +1,5 @@
 import {Outlet} from "react-router-dom";
-import {HeaderElement} from "../shared";
+import HeaderElement from "../shared/header/header.tsx";
 
 
 export default function MainLayout() {

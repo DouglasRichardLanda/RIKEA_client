@@ -1,7 +1,7 @@
 import {Route, Routes} from "react-router-dom";
 import {ErrorPages} from "../global-elements/errors/error.tsx";
-import {MainLayout} from "../global-elements/layouts";
 import {IndoorPage, MainBoardPage, MaterialsPage, OutdoorPage} from "../pages";
+import MainLayout from "../global-elements/layouts/main-layout.tsx";
 
 
 

@@ -1,7 +1,7 @@
 import MainBoardFace from "./main-board-face.tsx";
-import ElementH2Section from "../../global-elements/shared/element-h2-section.tsx";
-import {SectionLayout} from "../../global-elements/layouts";
+import ElementH2Section from "../../global-elements/shared/titles/element-h2-section.tsx";
 import MainBoardSection from "./main-board-section.tsx";
+import SectionLayout from "../../global-elements/layouts/section-layout.tsx";
 
 type SubElementType = {
   name: string,

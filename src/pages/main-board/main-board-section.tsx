@@ -1,7 +1,7 @@
-import {merge, useAvailableRandomItems} from "../../_lib";
 import {motion} from "framer-motion";
 import {useInView} from "react-intersection-observer";
 import {Link} from "react-router-dom";
+import merge from "../../_lib/merge.ts";
 
 type SubElement = {
   name: string,
@@ -20,7 +20,6 @@ type MainBoardSectionType = {
 
 export default function MainBoardSection(props: MainBoardSectionType) {
 
-  const number = useAvailableRandomItems(props.availableItems)
   const {ref, inView} = useInView({
     triggerOnce: true, // Ensures animation is only triggered once when entering the viewport
     threshold: 0.1, // Percentage of the element that must be visible (0.1 = 10%)
@@ -49,7 +48,7 @@ export default function MainBoardSection(props: MainBoardSectionType) {
             <p className={`tracking-wider`}>{props.text}</p>
           </div>
           <div className={`flex justify-between items-center`}>
-            <p className={`text-3xl font-bold`}>Over: {number === 0 ? 0 : number}+ Offers</p>
+            <p className={`text-3xl font-bold`}>Over: 1000+ Offers</p>
             <button className={`uppercase tracking-widest px-10 py-3 bg-red text-custom-bright`}>discover</button>
           </div>
         </div>
@@ -58,7 +57,6 @@ export default function MainBoardSection(props: MainBoardSectionType) {
         className={`mb-40 flex w-full justify-between gap-1`}>
         {props.subElements4.map((el, i) => {
           let duration = props.swap ? 0.7 : 1;
-          const local_number = useAvailableRandomItems(el.availableNumbers)
           return (
             <motion.div
               initial={{opacity: 0, y: "-20px"}}
@@ -69,7 +67,7 @@ export default function MainBoardSection(props: MainBoardSectionType) {
               className={`h-20 bg-custom-dark text-custom-bright w-full flex justify-center flex-col gap-5`}>
               <Link to={el.link} className={`self-center justify-self-center text-xl tracking-widest`}>{el.name}</Link>
               <div className={`self-end flex w-full justify-center`}>
-                <p className={`font-bold`}>Over: {local_number === 0 ? 0 : local_number}+ Offers</p>
+                <p className={`font-bold`}>Over: 2000+ Offers</p>
               </div>
             </motion.div>
           )

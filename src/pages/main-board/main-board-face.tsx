@@ -1,5 +1,5 @@
-import {merge} from "../../_lib";
 import {useEffect, useState} from "react";
+import merge from "../../_lib/merge.ts";
 
 
 type MainBoardFaceType = {
