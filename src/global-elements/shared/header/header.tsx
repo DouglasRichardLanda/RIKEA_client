@@ -1,8 +1,7 @@
 import {Link, useLocation} from "react-router-dom";
 import {FaFacebookF, FaLinkedinIn, FaTwitter} from "react-icons/fa6";
-import React, {MouseEvent, useEffect, useRef, useState} from "react";
-import merge from "../../../_lib/merge.ts";
-
+import React, {useEffect, useRef, useState} from "react";
+import merge from "../../../_lib/merge"
 
 const local_style = [
   "duration-200 hover:text-custom-medium text-lg",
@@ -10,10 +9,10 @@ const local_style = [
 ]
 
 export default function HeaderElement(props: { className: string }) {
-  const menuRef: React.MutableRefObject<HTMLElement | null> = React.useRef(null)
-  const subMenuRef: React.MutableRefObject<HTMLDivElement | null> = React.useRef(null);
+  const menuRef: React.MutableRefObject<HTMLElement | null> = useRef(null)
+  const subMenuRef: React.MutableRefObject<HTMLDivElement | null> = useRef(null);
 
-  const [open, setOpen] = React.useState<boolean>(false)
+  const [open, setOpen] = useState<boolean>(false)
 
   const location = useLocation();
 
