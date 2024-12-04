@@ -73,7 +73,7 @@ export default function HeaderElement(props: { className: string }) {
             <Link className={local_style[0]} to={`#`}>Metal</Link>
           </div>
           <div className={`flex flex-col gap-2`}>
-            <h3 className={`text-2xl font-bold`}>Kitchen</h3>
+            <h3 className={`text-2xl font-bold`}>Section</h3>
             <Link className={local_style[0]} to={`#`}>Element</Link>
             <Link className={local_style[0]} to={`#`}>Element</Link>
             <Link className={local_style[0]} to={`#`}>Element</Link>
