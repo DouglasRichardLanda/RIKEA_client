@@ -48,7 +48,7 @@ export default function HeaderElement(props: { className: string }) {
         className={merge(`bg-custom-dark sm:flex justify-center sm:justify-between items-center sm:items-center px-5`, props.className)}>
         <nav className={`tracking-wider text-lg flex gap-5 items-center`}>
           <Link to={`/`}><img src="/logo-no-background.svg" alt="Logo of the RIKEA" className={`w-40`}/></Link>
-          <div onClick={open_event} className={`hover:text-custom-medium duration-200 cursor-pointer`}>Sections</div>
+          <div onClick={open_event} className={`hover:text-custom-medium duration-200 cursor-pointer`}>Menu</div>
         </nav>
 
 
