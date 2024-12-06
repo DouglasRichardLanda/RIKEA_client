@@ -12,7 +12,7 @@ export default function MainLayout() {
 
       <Outlet />
 
-      <Footer className={`bg-custom-dark text-custom-bright z-50 p-20`} />
+      <Footer />
     </div>
   )
 }

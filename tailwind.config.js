@@ -5,6 +5,15 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    fontWeight: {
+      thin: '100',
+      extralight: '200',
+      light: '300',
+      normal: '400',
+      medium: '500',
+      semibold: '600',
+      bold: '700',
+    },
     screens: {
       xs: '320px',
       sm: '480px',
@@ -14,6 +23,7 @@ export default {
     },
     colors: {
       'custom-dark': '#081e35',
+      'custom-extra-dark': '#061729',
       'custom-medium': '#d97474',
       'custom-bright': '#ffffff',
       'blue': '#1fb6ff',
@@ -31,7 +41,11 @@ export default {
     fontFamily: {
       sans: ['Graphik', 'sans-serif'],
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        raleway: ['Raleway', 'sans-serif']
+      }
+    },
     plugins: [],
   }
 }

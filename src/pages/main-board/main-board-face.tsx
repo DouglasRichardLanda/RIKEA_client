@@ -1,7 +1,6 @@
 import {useEffect, useState} from "react";
 import merge from "../../_lib/merge.ts";
 
-
 type MainBoardFaceType = {
   imagesUrl: string[]
 }
@@ -36,7 +35,10 @@ export default function MainBoardFace(props: MainBoardFaceType) {
           <h1 className={`font-bold text-6xl tracking-widest`}>RIKE<span className={`text-custom-medium`}>A</span></h1>
           <p className={`tracking-wider text-2xl`}>Feels good - Feels like <span
             className={`text-custom-medium`}>home</span></p>
-          <button className={`uppercase tracking-widest px-10 py-3 bg-red`}>Contact</button>
+          <button onClick={() => {
+            const footer = document.getElementById("footer");
+            footer?.scrollIntoView({ behavior: 'smooth' })
+          }} className={`uppercase tracking-widest px-10 py-3 bg-red`}>Contact</button>
         </div>
       </div>
     </>
