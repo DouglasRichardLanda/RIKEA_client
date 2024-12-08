@@ -6,3 +6,14 @@
 body {
     @apply bg-custom-bright overflow-x-hidden font-raleway;
 }
+
+::-webkit-scrollbar {
+    @apply bg-custom-medium;
+    width: 10px;
+    border-radius: 5px;
+    height: 10px;
+}
+::-webkit-scrollbar-thumb {
+    @apply bg-custom-dark;
+    border-radius: 5px;
+}

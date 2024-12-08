@@ -32,7 +32,7 @@ export default function MainBoard() {
            origin={"Iceland"}
            price={18.99}
            width={30}
-           link={`#`}>
+           link={`/materials`}>
             <img src="/materials/pexels-chris-f-38966-9018152.jpg" alt="" className={`h-[300px] w-full object-cover`}/>
           </MainBoardSection>
           <MainBoardSection
@@ -43,7 +43,7 @@ export default function MainBoard() {
             origin={"Italy"}
             price={14.99}
             width={20}
-            link={`#`}>
+            link={`/materials`}>
             <img src="/materials/pexels-padrinan-194096.jpg" alt="" className={`h-[300px] w-full object-cover`}/>
           </MainBoardSection>
           <MainBoardSection
@@ -53,7 +53,7 @@ export default function MainBoard() {
             name={"Desert Pearl Stone"}
             origin={"Israel"}
             price={19.99}
-            width={30} link={`#`}>
+            width={30} link={`/materials`}>
             <img src="/materials/pexels-milivigerova-6031343.jpg" alt="" className={`h-[300px] w-full object-cover`}/>
           </MainBoardSection>
           <MainBoardSection
@@ -63,7 +63,7 @@ export default function MainBoard() {
             name={"Sahara Dune Brick"}
             origin={"Israel"}
             price={4.99}
-            width={10} link={`#`}>
+            width={10} link={`/materials`}>
             <img src="/materials/pexels-zhmkhv-3373282-5512653.jpg" alt="" className={`h-[300px] w-full object-cover`}/>
           </MainBoardSection>
         </div>
