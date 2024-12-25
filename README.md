@@ -1,50 +1,25 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+# RIKEA is a small E-Commerce platform for distribution house products
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Let's say, its focus lies on early stages of building process. The most magical part in everybody's life. Building your own house is truly an enjoyable thing. Using the RIKEA, users can search out the most beautiful materials for their future home. Starting with basic like wood and stone, finishing even some indoor decoration elements.
 
-## Expanding the ESLint configuration
+The simple E-Commerce platforms offers necessary functionality for searching goods. Payment and Contact forms.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Technically: **_React_** with **_TypeScript_** for Client side. **_Rust_** as a backend as prototype.
 
-- Configure the top-level `parserOptions` property like this:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+![](/public/git/pic1.png)
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+The RIKEA has a smooth animation on the welcome-part of the front page. All "Contact" buttons lead to the bottom of the page where the contact form is.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+![](/public/git/pic2.png)
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+The front page includes some insight about products
+![](/public/git/pic3.png)
+![](/public/git/pic4.png)
+![](/public/git/pic5.png)
+
+##### **_RIKEA is fully responsive for all devices_**
+
+25.12.2024 (I'll finish description another day)
