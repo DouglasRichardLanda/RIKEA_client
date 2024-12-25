@@ -2,6 +2,7 @@ import {Link, useLocation} from "react-router-dom";
 import {FaFacebookF, FaLinkedinIn, FaTwitter} from "react-icons/fa6";
 import React, {useEffect, useRef, useState} from "react";
 import merge from "../../../_lib/merge"
+import {RiShoppingBagFill} from "react-icons/ri";
 
 const local_style = [
   "duration-200 text-custom-bright text-lg",
@@ -49,7 +50,7 @@ export default function HeaderElement(props: { className: string }) {
         <nav className={`tracking-wider text-lg flex gap-5 items-center`}>
           <Link to={`/`}><img src="/logo-no-background.svg" alt="Logo of the RIKEA" className={`w-40`}/></Link>
           <div onClick={open_event} className={`hover:text-custom-medium duration-200 cursor-pointer`}>Menu</div>
-          <Link to={`/`}>Card</Link>
+          <Link to={`/payment`}><RiShoppingBagFill className={`w-8 h-8 hover:text-custom-medium duration-200`} /></Link>
         </nav>
 
 
@@ -73,9 +74,9 @@ export default function HeaderElement(props: { className: string }) {
           </div>
           <div className={`flex flex-col gap-2`}>
             <h3 className={`text-2xl font-bold`}>Section</h3>
-            <Link className={local_style[0]} to={`#`}>Element</Link>
-            <Link className={local_style[0]} to={`#`}>Element</Link>
-            <Link className={local_style[0]} to={`#`}>Element</Link>
+            <Link className={local_style[0]} to={`another-path1`}>Element</Link>
+            <Link className={local_style[0]} to={`another-path2`}>Element</Link>
+            <Link className={local_style[0]} to={`another-path3`}>Element</Link>
           </div>
           {/*<div className={`flex flex-col gap-2`}>*/}
           {/*  <h3 className={`text-2xl font-bold`}>Section</h3>*/}

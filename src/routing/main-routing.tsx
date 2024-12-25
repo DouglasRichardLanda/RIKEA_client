@@ -1,7 +1,7 @@
 import {Route, Routes} from "react-router-dom";
-import {ErrorPages} from "../global-elements/errors/error.tsx";
 import {IndoorPage, MainBoardPage, MaterialsPage, OutdoorPage} from "../pages";
 import MainLayout from "../global-elements/layouts/main-layout.tsx";
+import NoExist from "../pages/doesnt-exist/NoExist.tsx";
 
 
 
@@ -15,7 +15,7 @@ export default function MainRouting() {
         <Route path={'indoor'} element={<IndoorPage />} />
         <Route path={'outdoor'} element={<OutdoorPage />} />
 
-        <Route path={`*`} element={<ErrorPages />} />
+        <Route path={`*`} element={<NoExist />} />
       </Route>
     </Routes>
   )
