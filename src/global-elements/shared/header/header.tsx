@@ -4,7 +4,7 @@ import React, {useEffect, useRef, useState} from "react";
 import merge from "../../../_lib/merge"
 
 const local_style = [
-  "duration-200 hover:text-custom-medium text-lg",
+  "duration-200 text-custom-bright text-lg",
   "hover:text-custom-medium duration-200"
 ]
 
@@ -49,6 +49,7 @@ export default function HeaderElement(props: { className: string }) {
         <nav className={`tracking-wider text-lg flex gap-5 items-center`}>
           <Link to={`/`}><img src="/logo-no-background.svg" alt="Logo of the RIKEA" className={`w-40`}/></Link>
           <div onClick={open_event} className={`hover:text-custom-medium duration-200 cursor-pointer`}>Menu</div>
+          <Link to={`/`}>Card</Link>
         </nav>
 
 
@@ -61,38 +62,35 @@ export default function HeaderElement(props: { className: string }) {
 
       <div
         ref={subMenuRef}
-        className={merge(`fixed left-0 w-full z-40 bg-custom-bright px-20 pb-10 pt-5 border-b-2 border-b-custom-medium duration-200`, open ? "top-12" : "top-[-100%]")}>
+        className={merge(`fixed left-0 w-full z-40 bg-custom-medium px-20 pb-10 pt-5 border-b-2 border-b-custom-medium duration-200`, open ? "top-12" : "top-[-100%]")}>
         <div className={`flex gap-20`}>
           <div className={`flex flex-col gap-2`}>
             <h3 className={`text-2xl font-bold`}>Materials</h3>
             <Link className={local_style[0]} to={`materials`}>Stones</Link>
-            <Link className={local_style[0]} to={`#`}>Wood</Link>
-            <Link className={local_style[0]} to={`#`}>Glas</Link>
-            <Link className={local_style[0]} to={`#`}>Sand</Link>
-            <Link className={local_style[0]} to={`#`}>Blocks</Link>
-            <Link className={local_style[0]} to={`#`}>Metal</Link>
+            <Link className={local_style[0]} to={`materials`}>Wood</Link>
+            <Link className={local_style[0]} to={`materials`}>Glas</Link>
+            <Link className={local_style[0]} to={`materials`}>Sand</Link>
           </div>
           <div className={`flex flex-col gap-2`}>
             <h3 className={`text-2xl font-bold`}>Section</h3>
             <Link className={local_style[0]} to={`#`}>Element</Link>
             <Link className={local_style[0]} to={`#`}>Element</Link>
             <Link className={local_style[0]} to={`#`}>Element</Link>
-            <Link className={local_style[0]} to={`#`}>Element</Link>
           </div>
-          <div className={`flex flex-col gap-2`}>
-            <h3 className={`text-2xl font-bold`}>Section</h3>
-            <Link className={local_style[0]} to={`#`}>Element</Link>
-            <Link className={local_style[0]} to={`#`}>Element</Link>
-          </div>
-          <div className={`flex flex-col gap-2`}>
-            <h3 className={`text-2xl font-bold`}>Section</h3>
-            <Link className={local_style[0]} to={`#`}>Element</Link>
-            <Link className={local_style[0]} to={`#`}>Element</Link>
-            <Link className={local_style[0]} to={`#`}>Element</Link>
-            <Link className={local_style[0]} to={`#`}>Element</Link>
-            <Link className={local_style[0]} to={`#`}>Element</Link>
-            <Link className={local_style[0]} to={`#`}>Element</Link>
-          </div>
+          {/*<div className={`flex flex-col gap-2`}>*/}
+          {/*  <h3 className={`text-2xl font-bold`}>Section</h3>*/}
+          {/*  <Link className={local_style[0]} to={`#`}>Element</Link>*/}
+          {/*  <Link className={local_style[0]} to={`#`}>Element</Link>*/}
+          {/*</div>*/}
+          {/*<div className={`flex flex-col gap-2`}>*/}
+          {/*  <h3 className={`text-2xl font-bold`}>Section</h3>*/}
+          {/*  <Link className={local_style[0]} to={`#`}>Element</Link>*/}
+          {/*  <Link className={local_style[0]} to={`#`}>Element</Link>*/}
+          {/*  <Link className={local_style[0]} to={`#`}>Element</Link>*/}
+          {/*  <Link className={local_style[0]} to={`#`}>Element</Link>*/}
+          {/*  <Link className={local_style[0]} to={`#`}>Element</Link>*/}
+          {/*  <Link className={local_style[0]} to={`#`}>Element</Link>*/}
+          {/*</div>*/}
         </div>
       </div>
     </>
