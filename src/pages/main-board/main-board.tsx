@@ -3,6 +3,7 @@ import ElementH2Section from "../../global-elements/shared/titles/element-h2-sec
 import MainBoardSection from "./main-board-section.tsx";
 import SectionLayout from "../../global-elements/layouts/section-layout.tsx";
 import ContactLead from "../../global-elements/shared/elements/contact-lead.tsx";
+import FeedbackElement from "../../global-elements/shared/elements/feedback-element.tsx";
 
 type SubElementType = {
   name: string,
@@ -259,6 +260,23 @@ export default function MainBoard() {
           </MainBoardSection>
         </div>
         <ContactLead />
+      </SectionLayout>
+      <SectionLayout>
+        <ElementH2Section>Feedback</ElementH2Section>
+        <div className={`flex justify-between flex-wrap`}>
+          <FeedbackElement
+            path={`/people/person1.jpg`}
+            text={`I had such a great experience shopping here! The store was well-organized, the furniture is stylish and sturdy, and the staff were incredibly helpful. I found exactly what I needed, and the assembly instructions were clear and easy to follow. Will definitely shop here again!`} name={"Jack Paul"} />
+          <FeedbackElement
+            path={`/people/person2.jpg`}
+            text={`I had such a great experience shopping here! The store was well-organized, the furniture is stylish and sturdy, and the staff were incredibly helpful. I found exactly what I needed, and the assembly instructions were clear and easy to follow. Will definitely shop here again!`} name={"Martin O'Nill"} />
+          <FeedbackElement
+            path={`/people/person3.jpg`}
+            text={`I had such a great experience shopping here! The store was well-organized, the furniture is stylish and sturdy, and the staff were incredibly helpful. I found exactly what I needed, and the assembly instructions were clear and easy to follow. Will definitely shop here again!`} name={"Aaron O'Reilei"} />
+          <FeedbackElement
+            path={`/people/person4.jpg`}
+            text={`I had such a great experience shopping here! The store was well-organized, the furniture is stylish and sturdy, and the staff were incredibly helpful. I found exactly what I needed, and the assembly instructions were clear and easy to follow. Will definitely shop here again!`} name={"William Scarsgard"} />
+        </div>
       </SectionLayout>
     </section>
   )

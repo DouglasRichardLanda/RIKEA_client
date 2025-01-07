@@ -22,4 +22,8 @@ The front page includes some insight about products
 
 ##### **_RIKEA is fully responsive for all devices_**
 
-25.12.2024 (I'll finish description another day)
+![](/public/git/pic7.png)
+![](/public/git/pic8.png)
+
+![](/public/git/pic6.png)
+
