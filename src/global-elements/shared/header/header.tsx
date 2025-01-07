@@ -47,7 +47,7 @@ export default function HeaderElement(props: { className: string }) {
       <header
         ref={menuRef}
         className={merge(`bg-custom-dark sm:flex justify-center sm:justify-between items-center sm:items-center px-5`, props.className)}>
-        <nav className={`tracking-wider text-lg flex gap-5 items-center`}>
+        <nav className={`tracking-wider text-lg flex gap-5 items-center my-3 sm:mb-0`}>
           <Link to={`/`}><img src="/logo-no-background.svg" alt="Logo of the RIKEA" className={`w-40`}/></Link>
           <div onClick={open_event} className={`hover:text-custom-medium duration-200 cursor-pointer`}>Menu</div>
           <Link to={`/payment`}><RiShoppingBagFill className={`w-8 h-8 hover:text-custom-medium duration-200`} /></Link>
@@ -63,7 +63,7 @@ export default function HeaderElement(props: { className: string }) {
 
       <div
         ref={subMenuRef}
-        className={merge(`fixed left-0 w-full z-40 bg-custom-medium px-20 pb-10 pt-5 border-b-2 border-b-custom-medium duration-200`, open ? "top-12" : "top-[-100%]")}>
+        className={merge(`fixed left-0 w-full z-40 bg-custom-medium px-20 pb-10 pt-5 border-b-2 border-b-custom-medium duration-200`, open ? "top-20 sm:top-12" : "top-[-100%]")}>
         <div className={`flex gap-20`}>
           <div className={`flex flex-col gap-2`}>
             <h3 className={`text-2xl font-bold`}>Materials</h3>

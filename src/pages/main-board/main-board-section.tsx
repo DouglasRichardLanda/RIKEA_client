@@ -2,6 +2,8 @@ import {MdOutlineEventAvailable} from "react-icons/md";
 import {FaTextHeight, FaTextWidth} from "react-icons/fa";
 import {BiLandscape} from "react-icons/bi";
 import {Link} from "react-router-dom";
+import {useEffect, useState} from "react";
+import {ImSpinner8} from "react-icons/im";
 
 interface MainBoardSectionInterface {
   children: React.ReactNode,
@@ -18,10 +20,14 @@ interface MainBoardSectionInterface {
 
 export default function MainBoardSection(props: MainBoardSectionInterface) {
 
+  const [loaded, setLoaded] = useState<boolean>(false)
+  useEffect(() => {
+    setLoaded(true)
+  }, []);
 
   return (
     <Link to={props.link} className={`w-full col-span-1 shadow-xl max-w-[700px]`}>
-      {props.children}
+      {loaded ? props.children : <div className={`h-[300px] flex w-full justify-center items-center`}><ImSpinner8 className={`w-10 h-10 animate-spin`} /></div>}
       <div className={`p-5`}>
         <div className={`flex flex-col gap-1 my-5`}>
           <h3 className={`text-3xl font-bold`}>{props.name}</h3>
