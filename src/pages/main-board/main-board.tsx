@@ -262,6 +262,7 @@ export default function MainBoard() {
         <ContactLead />
       </SectionLayout>
       <SectionLayout>
+        {/*TODO:: Make a Courusel out of Feedbacks*/}
         <ElementH2Section>Feedback</ElementH2Section>
         <div className={`flex justify-between flex-wrap`}>
           <FeedbackElement
